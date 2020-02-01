@@ -16,6 +16,7 @@
 
 package com.example.bancodedados;
 
+import com.sun.org.apache.xml.internal.utils.URI;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +31,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.net.URISyntaxException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -41,15 +40,13 @@ import java.util.Map;
 @SpringBootApplication
 public class Main {
 
-  //@Value("${spring.datasource.url}")
-  static private String dbUrl = "postgres://lbqvjvwascbnvm:ebcf05adf0182981d555207b5330c1636f70c97431a9272961f2c510d050578f@ec2-54-225-115-177.compute-1.amazonaws.com:5432/de9ajdtkd0lce3";
-
-  //@Autowired
-  static private DataSource dataSource;
+  @Value("${spring.datasource.url}")
+  private String dbUrl;
+  @Autowired
+  private DataSource dataSource;
 
   public static void main(String[] args) throws Exception {
-    System.out.println(dbUrl);
-    dataSource = dataSource();
+
     SpringApplication.run(Main.class, args);
   }
 
@@ -79,24 +76,24 @@ public class Main {
     }
   }
 
-//  @Bean
-//  public DataSource dataSource() throws SQLException {
-//    if (dbUrl == null || dbUrl.isEmpty()) {
-//      return new HikariDataSource();
-//    } else {
-//      HikariConfig config = new HikariConfig();
-//      config.setJdbcUrl(dbUrl);
-//      return new HikariDataSource(config);
-//    }
-//  }
-
   @Bean
-  public static DataSource dataSource() {
-    DriverManagerDataSource dataSource = new DriverManagerDataSource();
-    dataSource.setDriverClassName("org.postgresql.Driver");
-    dataSource.setUrl(dbUrl);
-    dataSource.setUsername("lbqvjvwascbnvm");
-    dataSource.setPassword("ebcf05adf0182981d555207b5330c1636f70c97431a9272961f2c510d050578f");
-    return dataSource;
+  public DataSource dataSource() throws SQLException {
+    if (dbUrl == null || dbUrl.isEmpty()) {
+      return new HikariDataSource();
+    } else {
+      HikariConfig config = new HikariConfig();
+      config.setJdbcUrl(dbUrl);
+      return new HikariDataSource(config);
+    }
   }
+
+//  @Bean
+//  public static DataSource dataSource() {
+//    DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//    dataSource.setDriverClassName("org.postgresql.Driver");
+//    dataSource.setUrl(dbUrl);
+//    dataSource.setUsername("lbqvjvwascbnvm");
+//    dataSource.setPassword("ebcf05adf0182981d555207b5330c1636f70c97431a9272961f2c510d050578f");
+//    return dataSource;
+//  }
 }
