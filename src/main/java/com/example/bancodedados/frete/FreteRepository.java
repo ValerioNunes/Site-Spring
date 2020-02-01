@@ -1,6 +1,5 @@
 package com.example.bancodedados.frete;
 
-import com.example.bancodedados.frete.Frete;
 import com.example.bancodedados.cidade.CidadeQtdFrete;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -22,6 +21,6 @@ public interface FreteRepository extends JpaRepository<Frete, Long> {
     @Query(value = "select  * From Frete u order by u.valor desc limit 1", nativeQuery = true)
     Frete maxValorFrete();
 
-    @Query("select new integracao.bancodedados.cidade.CidadeQtdFrete( u.cidade , count(u)) from Frete u group by u.cidade order by  count(u) desc")
+    @Query("select new com.example.bancodedados.cidade.CidadeQtdFrete( u.cidade , count(u)) from Frete u group by u.cidade order by  count(u) desc")
     List<CidadeQtdFrete> cidadeComMaisFrete();
 }

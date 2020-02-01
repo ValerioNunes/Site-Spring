@@ -1,6 +1,6 @@
 package com.example.bancodedados.cidade;
 
-import com.example.bancodedados.cidade.Cidade;
+
 
 public class CidadeQtdFrete {
     Cidade cidade;
