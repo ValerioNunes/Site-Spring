@@ -1,8 +1,9 @@
 package com.example.bancodedados.frete;
 
-import bancodedados.frete.Frete;
-import bancodedados.frete.FreteException;
-import bancodedados.frete.FreteService;
+import com.example.bancodedados. frete.Frete;
+import com.example.bancodedados.frete.FreteException;
+import com.example.bancodedados.frete.FreteService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

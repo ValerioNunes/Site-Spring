@@ -1,6 +1,6 @@
 package com.example.bancodedados.cidade;
 
-import bancodedados.cidade.Cidade;
+import com.example.bancodedados.cidade.Cidade;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

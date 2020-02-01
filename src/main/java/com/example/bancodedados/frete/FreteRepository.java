@@ -1,7 +1,7 @@
 package com.example.bancodedados.frete;
 
-import bancodedados.frete.Frete;
-import integracao.bancodedados.cidade.CidadeQtdFrete;
+import com.example.bancodedados.frete.Frete;
+import com.example.bancodedados.cidade.CidadeQtdFrete;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

@@ -67,8 +67,8 @@ public class Cidade {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof bancodedados.cidade.Cidade)) return false;
-        bancodedados.cidade.Cidade cidade = (bancodedados.cidade.Cidade) o;
+        if (!(o instanceof com.example.bancodedados.cidade.Cidade)) return false;
+        com.example.bancodedados.cidade.Cidade cidade = (com.example.bancodedados.cidade.Cidade) o;
         return Double.compare(cidade.taxa, taxa) == 0 &&
                 getId().equals(cidade.getId()) &&
                 getUF().equals(cidade.getUF()) &&

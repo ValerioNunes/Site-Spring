@@ -1,7 +1,7 @@
 package com.example.bancodedados.frete;
 
-import integracao.bancodedados.cidade.Cidade;
-import integracao.bancodedados.cliente.Cliente;
+import com.example.bancodedados.cidade.Cidade;
+import com.example.bancodedados.cliente.Cliente;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -95,8 +95,8 @@ public class Frete implements Serializable {
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof bancodedados.frete.Frete)) return false;
-		bancodedados.frete.Frete frete = (bancodedados.frete.Frete) o;
+		if (!(o instanceof com.example.bancodedados.frete.Frete)) return false;
+		com.example.bancodedados.frete.Frete frete = (com.example.bancodedados.frete.Frete) o;
 		return Objects.equals(getId(), frete.getId());
 	}
 
