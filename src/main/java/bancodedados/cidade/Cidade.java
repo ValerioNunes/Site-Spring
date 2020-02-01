@@ -10,7 +10,7 @@ import java.util.Objects;
 
 @Entity
 public class Cidade {
-
+//test
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
