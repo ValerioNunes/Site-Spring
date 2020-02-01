@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example;
+package com.example.bancodedados;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

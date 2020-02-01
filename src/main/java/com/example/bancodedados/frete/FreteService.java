@@ -1,5 +1,8 @@
-package bancodedados.frete;
+package com.example.bancodedados.frete;
 
+import bancodedados.frete.Frete;
+import bancodedados.frete.FreteException;
+import bancodedados.frete.FreteRepository;
 import integracao.bancodedados.cidade.Cidade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;

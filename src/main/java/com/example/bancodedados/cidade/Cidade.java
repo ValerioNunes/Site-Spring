@@ -1,4 +1,4 @@
-package bancodedados.cidade;
+package com.example.bancodedados.cidade;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -67,8 +67,8 @@ public class Cidade {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Cidade)) return false;
-        Cidade cidade = (Cidade) o;
+        if (!(o instanceof bancodedados.cidade.Cidade)) return false;
+        bancodedados.cidade.Cidade cidade = (bancodedados.cidade.Cidade) o;
         return Double.compare(cidade.taxa, taxa) == 0 &&
                 getId().equals(cidade.getId()) &&
                 getUF().equals(cidade.getUF()) &&

@@ -1,4 +1,4 @@
-package bancodedados.cliente;
+package com.example.bancodedados.cliente;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -65,8 +65,8 @@ public class Cliente {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Cliente)) return false;
-        Cliente cliente = (Cliente) o;
+        if (!(o instanceof bancodedados.cliente.Cliente)) return false;
+        bancodedados.cliente.Cliente cliente = (bancodedados.cliente.Cliente) o;
         return getId().equals(cliente.getId()) &&
                 getEndereco().equals(cliente.getEndereco()) &&
                 getTelefone().equals(cliente.getTelefone()) &&
