@@ -7,5 +7,5 @@ before_install:
 deploy:
   provider: heroku
   api_key:
-    secure: "cbbb2873-85de-4e02-b21b-528381c26b06"
+    secure: $ApiKey
   app: valeriano-system-15107
