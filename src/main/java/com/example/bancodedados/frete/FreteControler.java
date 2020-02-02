@@ -1,5 +1,7 @@
 package com.example.bancodedados.frete;
 
+import com.example.bancodedados.cidade.Cidade;
+import com.example.bancodedados.cliente.Cliente;
 import com.example.bancodedados. frete.Frete;
 import com.example.bancodedados.frete.FreteException;
 import com.example.bancodedados.frete.FreteService;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -23,7 +26,18 @@ public class FreteControler {
         @GetMapping("/")
         public ResponseEntity<List<Frete>> Fretes(){
             List<Frete> Fretes = freteService.buscarFretes();
-            return ResponseEntity.ok(Fretes);
+
+            Cliente cliente1 = new Cliente("Valerio", "Monte Castelo", "123456789");
+
+
+            Cidade cidade1 = new Cidade("Sao Luis", 12.3, "MA");
+
+
+            Frete frete1 = new Frete(234.0,"Maquina 1",1000.0,cliente1,cidade1);
+            ArrayList<Frete> f = new ArrayList<Frete>();
+            f.add(frete1);
+
+            return ResponseEntity.ok(f);
         }
 
         @GetMapping("/frete/{id}")
