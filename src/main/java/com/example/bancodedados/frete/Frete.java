@@ -11,6 +11,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
+@Table(name = "frete")
 public class Frete implements Serializable {
 
 	@Id

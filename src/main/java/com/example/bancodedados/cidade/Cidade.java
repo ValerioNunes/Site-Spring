@@ -1,14 +1,12 @@
 package com.example.bancodedados.cidade;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.PositiveOrZero;
 import java.util.Objects;
 
 @Entity
+@Table(name = "cidade")
 public class Cidade {
 //test
     @Id
