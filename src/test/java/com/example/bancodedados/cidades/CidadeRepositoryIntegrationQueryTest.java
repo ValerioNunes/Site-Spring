@@ -19,7 +19,7 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @DataJpaTest
 //@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class CidadesRepositoryIntegrationQueryTest {
+public class CidadeRepositoryIntegrationQueryTest {
 
 	@Autowired
 	private CidadeRepository cidadeRepository;
