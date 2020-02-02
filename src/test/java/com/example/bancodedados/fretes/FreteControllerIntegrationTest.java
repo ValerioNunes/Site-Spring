@@ -82,6 +82,7 @@ public class FreteControllerIntegrationTest {
 
         @After
         public void end() {
+
             freteRepository.deleteAll();
         }
 
