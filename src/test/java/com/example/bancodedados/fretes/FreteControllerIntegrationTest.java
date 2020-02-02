@@ -82,8 +82,8 @@ public class FreteControllerIntegrationTest {
 
         @After
         public void end() {
-            clienteRepository.deleteAll();
-            cidadeRepository.findAll();
+            //clienteRepository.deleteAll();
+            //cidadeRepository.findAll();
             freteRepository.deleteAll();
         }
 
