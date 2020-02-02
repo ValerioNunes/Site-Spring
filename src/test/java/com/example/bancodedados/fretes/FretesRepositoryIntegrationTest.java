@@ -30,7 +30,7 @@ usam um banco de dados em memória. */
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class FretesRepositoryIntegrationTest {
 
 	@Autowired
