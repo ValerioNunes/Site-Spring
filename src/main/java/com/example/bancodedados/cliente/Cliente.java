@@ -5,7 +5,6 @@ import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
 
 @Entity
-@Table(name = "cliente")
 public class Cliente {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

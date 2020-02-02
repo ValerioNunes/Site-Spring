@@ -6,7 +6,6 @@ import javax.validation.constraints.PositiveOrZero;
 import java.util.Objects;
 
 @Entity
-@Table(name = "cidade")
 public class Cidade {
 //test
     @Id

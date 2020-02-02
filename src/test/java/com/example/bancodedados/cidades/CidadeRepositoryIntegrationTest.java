@@ -26,7 +26,8 @@ usam um banco de dados em memória. */
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+
 public class CidadeRepositoryIntegrationTest {
 
 	@Autowired
