@@ -8,4 +8,4 @@ deploy:
   provider: heroku
   api_key:
     secure: $ApiKey
-  app: valeriano-system-15107
+  app: $App
